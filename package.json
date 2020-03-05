@@ -1,23 +1,14 @@
 {
-	"name": "js-design-patterns",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "jest --watch"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/MattCrook/js-design-patterns.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/MattCrook/js-design-patterns/issues"
-	},
-	"homepage": "https://github.com/MattCrook/js-design-patterns#readme",
-	"devDependencies": {
-		"jest": "^22.4.4"
-	}
+  "name": "js-design-patterns",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "jest": "^22.4.3"
+  },
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
 }
