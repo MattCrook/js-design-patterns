@@ -5,14 +5,14 @@
 */
 
 class CumulativeSum {
-	constructor(intialValue = 0) {
-		this.sum = intialValue;
-	}
+  constructor(intialValue = 0) {
+    this.sum = intialValue;
+  }
 
-	add(value) {
-		this.sum += value;
-		return this;
-	}
+  add(value) {
+    this.sum += value;
+    return this;
+  }
 }
 
-module.exports = CumulativeSum;
+export default CumulativeSum;

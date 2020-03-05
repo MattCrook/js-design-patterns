@@ -4,44 +4,44 @@
 
 // encapsulation
 class Commute {
-	travel(transport) {
-		return transport.travelTime();
-	}
+  travel(transport) {
+    return transport.travelTime();
+  }
 }
 
 class Vehicle {
-	travelTime() {
-		return this._timeTaken;
-	}
+  travelTime() {
+    return this._timeTaken;
+  }
 }
 
 // strategy 1
 class Bus extends Vehicle {
-	constructor() {
-		super();
-		this._timeTaken = 10;
-	}
+  constructor() {
+    super();
+    this._timeTaken = 10;
+  }
 }
 
 // strategy 2
 class Taxi extends Vehicle {
-	constructor() {
-		super();
-		this._timeTaken = 5;
-	}
+  constructor() {
+    super();
+    this._timeTaken = 5;
+  }
 }
 
 // strategy 3
 class PersonalCar extends Vehicle {
-	constructor() {
-		super();
-		this._timeTaken = 3;
-	}
+  constructor() {
+    super();
+    this._timeTaken = 3;
+  }
 }
 
-module.exports = {
-	Commute,
-	Bus,
-	Taxi,
-	PersonalCar,
+export default {
+  Commute,
+  Bus,
+  Taxi,
+  PersonalCar
 };

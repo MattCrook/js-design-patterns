@@ -3,57 +3,58 @@
 */
 
 class TrafficLight {
-	constructor() {
-		this.states = [new GreenLight(), new RedLight(), new YellowLight()];
-		this.current = this.states[0];
-	}
+  constructor() {
+    this.states = [new GreenLight(), new RedLight(), new YellowLight()];
+    this.current = this.states[0];
+  }
 
-	change() {
-		const totalStates = this.states.length;
-		let currentIndex = this.states.findIndex(light => light === this.current);
-		if (currentIndex + 1 < totalStates) this.current = this.states[currentIndex + 1];
-		else this.current = this.states[0];
-	}
+  change() {
+    const totalStates = this.states.length;
+    let currentIndex = this.states.findIndex(light => light === this.current);
+    if (currentIndex + 1 < totalStates)
+      this.current = this.states[currentIndex + 1];
+    else this.current = this.states[0];
+  }
 
-	sign() {
-		return this.current.sign();
-	}
+  sign() {
+    return this.current.sign();
+  }
 }
 
 class Light {
-	constructor(light) {
-		this.light = light;
-	}
+  constructor(light) {
+    this.light = light;
+  }
 }
 
 class RedLight extends Light {
-	constructor() {
-		super('red');
-	}
+  constructor() {
+    super("red");
+  }
 
-	sign() {
-		return 'STOP';
-	}
+  sign() {
+    return "STOP";
+  }
 }
 
 class YellowLight extends Light {
-	constructor() {
-		super('yellow');
-	}
+  constructor() {
+    super("yellow");
+  }
 
-	sign() {
-		return 'STEADY';
-	}
+  sign() {
+    return "STEADY";
+  }
 }
 
 class GreenLight extends Light {
-	constructor() {
-		super('green');
-	}
+  constructor() {
+    super("green");
+  }
 
-	sign() {
-		return 'GO';
-	}
+  sign() {
+    return "GO";
+  }
 }
 
-module.exports = TrafficLight;
+export default TrafficLight;

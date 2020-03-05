@@ -99,7 +99,7 @@ class Composite extends Component {
   }
 }
 
-module.exports = {
+export default {
   Component,
   Leaf,
   Composite

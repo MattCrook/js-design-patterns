@@ -21,9 +21,9 @@ const proxiedNetworkFetch = new Proxy(networkFetch, {
       cache.push(urlParam);
       return Reflect.apply(target, thisArg, args);
     }
-  },
+  }
 });
 
-module.exports = {
-  proxiedNetworkFetch,
+export default {
+  proxiedNetworkFetch
 };

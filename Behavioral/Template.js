@@ -3,43 +3,45 @@
 */
 
 class Employee {
-	constructor(name, salary) {
-		this._name = name;
-		this._salary = salary;
-	}
+  constructor(name, salary) {
+    this._name = name;
+    this._salary = salary;
+  }
 
-	work() {
-		return `${this._name} handles ${this.responsibilities() /* gap to be filled by subclass */}`;
-	}
+  work() {
+    return `${this._name} handles ${
+      this.responsibilities() /* gap to be filled by subclass */
+    }`;
+  }
 
-	getPaid() {
-		return `${this._name} got paid ${this._salary}`;
-	}
+  getPaid() {
+    return `${this._name} got paid ${this._salary}`;
+  }
 }
 
 class Developer extends Employee {
-	constructor(name, salary) {
-		super(name, salary);
-	}
+  constructor(name, salary) {
+    super(name, salary);
+  }
 
-	// details handled by subclass
-	responsibilities() {
-		return 'application development';
-	}
+  // details handled by subclass
+  responsibilities() {
+    return "application development";
+  }
 }
 
 class Tester extends Employee {
-	constructor(name, salary) {
-		super(name, salary);
-	}
+  constructor(name, salary) {
+    super(name, salary);
+  }
 
-	// details handled by subclass
-	responsibilities() {
-		return 'testing';
-	}
+  // details handled by subclass
+  responsibilities() {
+    return "testing";
+  }
 }
 
-module.exports = {
-	Tester,
-	Developer,
+export default {
+  Tester,
+  Developer
 };
